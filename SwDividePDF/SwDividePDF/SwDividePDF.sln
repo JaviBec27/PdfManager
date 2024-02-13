@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwDividePDF", "SwDividePDF.csproj", "{BD66DAEC-1F4B-4EEF-BBBC-F3874FEB8C6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD66DAEC-1F4B-4EEF-BBBC-F3874FEB8C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD66DAEC-1F4B-4EEF-BBBC-F3874FEB8C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD66DAEC-1F4B-4EEF-BBBC-F3874FEB8C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD66DAEC-1F4B-4EEF-BBBC-F3874FEB8C6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4341266B-6471-45E7-B474-4A5862C20485}
+	EndGlobalSection
+EndGlobal

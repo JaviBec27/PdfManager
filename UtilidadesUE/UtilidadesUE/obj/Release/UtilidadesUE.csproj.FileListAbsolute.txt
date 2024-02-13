@@ -1,0 +1,16 @@
+C:\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\bin\Release\UtilidadesUE.dll
+C:\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\bin\Release\UtilidadesUE.pdb
+C:\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\obj\Release\UtilidadesUE.dll
+C:\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\obj\Release\UtilidadesUE.pdb
+C:\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\obj\Release\UtilidadesUE.csprojResolveAssemblyReference.cache
+C:\Visual Studio Training\ProyectosElectorales\UtilidadesUE\UtilidadesUE\bin\Release\UtilidadesUE.dll
+C:\Visual Studio Training\ProyectosElectorales\UtilidadesUE\UtilidadesUE\bin\Release\UtilidadesUE.pdb
+C:\Visual Studio Training\ProyectosElectorales\UtilidadesUE\UtilidadesUE\obj\Release\UtilidadesUE.dll
+C:\Visual Studio Training\ProyectosElectorales\UtilidadesUE\UtilidadesUE\obj\Release\UtilidadesUE.pdb
+C:\Visual Studio Training\ProyectosElectorales\UtilidadesUE\UtilidadesUE\obj\Release\UtilidadesUE.csprojResolveAssemblyReference.cache
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\bin\Release\UtilidadesUE.dll
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\bin\Release\UtilidadesUE.pdb
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Release\UtilidadesUE.csproj.AssemblyReference.cache
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Release\UtilidadesUE.csproj.CoreCompileInputs.cache
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Release\UtilidadesUE.dll
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Release\UtilidadesUE.pdb

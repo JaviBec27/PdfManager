@@ -1,0 +1,25 @@
+C:\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.dll
+C:\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.pdb
+C:\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.dll
+C:\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.pdb
+C:\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.csprojResolveAssemblyReference.cache
+C:\Visual Studio Training\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.dll
+C:\Visual Studio Training\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.pdb
+C:\Visual Studio Training\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.dll
+C:\Visual Studio Training\Visual Studio Training\Proyects of training\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.pdb
+C:\Visual Studio Training\ProyectosElectorales\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.dll
+C:\Visual Studio Training\ProyectosElectorales\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.pdb
+C:\Visual Studio Training\ProyectosElectorales\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.dll
+C:\Visual Studio Training\ProyectosElectorales\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.pdb
+C:\Visual Studio Training\ProyectosElectorales\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.csprojResolveAssemblyReference.cache
+C:\LastPc\C\CTS\Electoral_Principal\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.csproj.CoreCompileInputs.cache
+C:\LastPc\C\CTS\Electoral_Principal\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.dll
+C:\LastPc\C\CTS\Electoral_Principal\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.pdb
+C:\LastPc\C\CTS\Electoral_Principal\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.dll
+C:\LastPc\C\CTS\Electoral_Principal\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.pdb
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.dll
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.pdb
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.csproj.AssemblyReference.cache
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.csproj.CoreCompileInputs.cache
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.dll
+C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.pdb

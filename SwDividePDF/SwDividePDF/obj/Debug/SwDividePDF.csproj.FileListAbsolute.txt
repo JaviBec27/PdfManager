@@ -1,0 +1,68 @@
+c:\users\javbecsa\documents\visual studio 2013\Projects\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.exe.config
+c:\users\javbecsa\documents\visual studio 2013\Projects\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.exe
+c:\users\javbecsa\documents\visual studio 2013\Projects\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.pdb
+c:\users\javbecsa\documents\visual studio 2013\Projects\SwDividePDF\SwDividePDF\bin\Debug\itextsharp.dll
+c:\users\javbecsa\documents\visual studio 2013\Projects\SwDividePDF\SwDividePDF\bin\Debug\itextsharp.xml
+c:\users\javbecsa\documents\visual studio 2013\Projects\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.Properties.Resources.resources
+c:\users\javbecsa\documents\visual studio 2013\Projects\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.GenerateResource.Cache
+c:\users\javbecsa\documents\visual studio 2013\Projects\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.exe
+c:\users\javbecsa\documents\visual studio 2013\Projects\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.pdb
+c:\users\javbecsa\documents\visual studio 2013\Projects\SwDividePDF\SwDividePDF\bin\Debug\UtilidadesUE.dll
+C:\Users\javbecsa\Documents\Visual Studio 2013\Projects\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.DividePDF.resources
+C:\Users\javbecsa\Documents\Visual Studio 2013\Projects\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.Index.resources
+C:\Users\javbecsa\Documents\Visual Studio 2013\Projects\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.UnePDFs.resources
+C:\Users\javbecsa\Documents\Visual Studio 2013\Projects\SwDividePDF\SwDividePDF\bin\Debug\UtilidadesUE.pdb
+C:\Users\javbecsa\Documents\Visual Studio 2013\Projects\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.DividePdfByPattern.resources
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.exe.config
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.exe
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.pdb
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\bin\Debug\itextsharp.dll
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\bin\Debug\itextsharp.xml
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.DividePDF.resources
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.DividePdfByPattern.resources
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.Index.resources
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.Properties.Resources.resources
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.UnePDFs.resources
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.GenerateResource.cache
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.CoreCompileInputs.cache
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.CopyComplete
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.exe
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.pdb
+C:\LastPc\C\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.AddVersionAndDate.resources
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.exe.config
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.exe
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.pdb
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\bin\Debug\itextsharp.dll
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\bin\Debug\itextsharp.xml
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csprojAssemblyReference.cache
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.DividePDF.resources
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.DividePdfByPattern.resources
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.Index.resources
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.AddVersionAndDate.resources
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.Properties.Resources.resources
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.UnePDFs.resources
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.GenerateResource.cache
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.CoreCompileInputs.cache
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.CopyComplete
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.exe
+C:\Users\javbecsa\Documents\Desarrollo\CTS\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.pdb
+C:\Users\javbecsa\OneDrive - Carvajal S.A\Desarrollo\Desarrollo\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.exe
+C:\Users\javbecsa\OneDrive - Carvajal S.A\Desarrollo\Desarrollo\Electoral_Principal\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.pdb
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.exe.config
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.exe
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.pdb
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\bin\Debug\itextsharp.dll
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\bin\Debug\itextsharp.xml
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.AssemblyReference.cache
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.SuggestedBindingRedirects.cache
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.DividePDF.resources
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.DividePdfByPattern.resources
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.Index.resources
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.AddVersionAndDate.resources
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.Properties.Resources.resources
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.UnePDFs.resources
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.GenerateResource.cache
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.CoreCompileInputs.cache
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.CopyComplete
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.exe
+C:\Compilaciones\Desarrollo\csharp\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.pdb
