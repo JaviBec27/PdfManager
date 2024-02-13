@@ -43,7 +43,6 @@ namespace SwDividePDF
             try
             {
                 var pdf = new Negocio.PDFOperation(worker);
-                //pdf.DividePagesxPattern(pdfPath, Negocio.ConfigPattern.GetDictionary(divisorPatternPath), nombre, prefijo);
                 pdf.DividePagesxPattern2(pdfPath, Negocio.ConfigPattern.GetFilePatternManagements(divisorPatternPath), nombre);
 
                 UtilidadesUE.Mensajes.Mostrar("Proceso Finalizado!", UtilidadesUE.Mensajes.Tipos.Info);
