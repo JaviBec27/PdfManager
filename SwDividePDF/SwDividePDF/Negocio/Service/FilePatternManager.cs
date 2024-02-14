@@ -1,39 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using SwDividePDF.Negocio.Model;
 
-namespace SwDividePDF.Negocio
+namespace SwDividePDF.Negocio.Service
 {
-    public static class ConfigPattern
+    public static class FilePatternManager
     {
         /// <summary>
         /// Devuelve un archivo diccionario con el numero de kit y la cantidad de páginas; obtenidos desde el archivo de configuración de patrón 
         /// </summary>
         /// <param name="sourcePath"></param>
         /// <returns></returns>
-        public static Dictionary<int, int> GetDictionary(string sourcePath)
+        public static Dictionary<int, int> GetDictionary(string sourcePath, bool hasHeader, char splitter)
         {
-            Dictionary<int, int> dic = new Dictionary<int, int>();
+            Dictionary<int, int> dictionary = new Dictionary<int, int>();
 
             try
             {
                 using (var sr = new StreamReader(sourcePath))
                 {
-                    var header = sr.ReadLine();
-                    if (!HeaderValidator(header))
-                        throw new Exception("Header Invalido!. Solo se acepta este header: KIT;PAGINAS ");
+                    if (hasHeader)
+                        sr.ReadLine();
+
 
                     while (!sr.EndOfStream)
                     {
                         var line = sr.ReadLine();
 
-                        var arrLine = line.Split(';');
+                        var arrLine = line.Split(splitter);
 
                         if (arrLine.Length > 1)
                         {
-                            var kit = int.Parse(arrLine[0]);
+                            var name = int.Parse(arrLine[0]);
                             var pags = int.Parse(arrLine[1]);
-                            dic.Add(kit, pags);
+                            dictionary.Add(name, pags);
                         }
                     }
                 }
@@ -43,38 +44,39 @@ namespace SwDividePDF.Negocio
                 throw ex;
             }
 
-            return dic;
+            return dictionary;
         }
+
+
 
         /// <summary>
         /// Devuelve un archivo diccionario con el numero de kit y la cantidad de páginas; obtenidos desde el archivo de configuración de patrón 
         /// </summary>
         /// <param name="sourcePath"></param>
         /// <returns></returns>
-        public static List<FilePatternManagement> GetFilePatternManagements(string sourcePath)
+        public static List<SplitPattern> GetFilePatternManagements(string sourcePath, bool hasHeader, char splitter)
         {
-            var list = new List<FilePatternManagement>();
+            var list = new List<SplitPattern>();
 
             try
             {
                 using (var sr = new StreamReader(sourcePath))
                 {
-                    var header = sr.ReadLine();
-                    if (!HeaderValidator(header))
-                        throw new Exception("Header Invalido!. Solo se acepta este header: KIT;PAGINAS;CORPORACION ");
+                    if (hasHeader)
+                        sr.ReadLine();
 
                     while (!sr.EndOfStream)
                     {
                         var line = sr.ReadLine();
 
-                        var arrLine = line.Split(';');
+                        var arrLine = line.Split(splitter);
 
                         if (arrLine.Length > 1)
                         {
-                            var kit = arrLine[0];
+                            var name = arrLine[0];
                             var pags = int.Parse(arrLine[1]);
-                            var corp = arrLine[2];
-                            list.Add(new FilePatternManagement() { Kit = kit, Paginas = pags, Corporacion = corp });
+                            var sufix = arrLine[2];
+                            list.Add(new SplitPattern() { Name = name, Pags = pags, Sufix = sufix });
                         }
                     }
                 }
@@ -87,19 +89,5 @@ namespace SwDividePDF.Negocio
             return list;
         }
 
-        private static bool HeaderValidator(string line)
-        {
-            if (line == "KIT;PAGINAS" || line == "KIT;PAGINAS;CORPORACION")            
-                return true;           
-
-            return false;
-        }
-    }
-
-    public class FilePatternManagement
-    {
-        public string Kit { get; set; }
-        public int Paginas { get; set; }
-        public string Corporacion { get; set; }
     }
 }

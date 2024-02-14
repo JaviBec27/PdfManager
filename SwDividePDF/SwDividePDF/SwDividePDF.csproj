@@ -70,9 +70,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Negocio\Dto\SplitByPatternPresentationDto.cs" />
     <Compile Include="Negocio\Implementation\PdfPatternSplit.cs" />
     <Compile Include="Negocio\Implementation\PdfSplit.cs" />
     <Compile Include="Negocio\Interface\IPdfPatternSplit.cs" />
+    <Compile Include="Negocio\Service\FilePatternManager.cs" />
+    <Compile Include="Negocio\Service\PatternManager.cs" />
     <Compile Include="Presentación\DividePDF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,7 +103,7 @@
     <Compile Include="Negocio\Implementation\PdfExtract.cs" />
     <Compile Include="Negocio\Implementation\PdfJoin.cs" />
     <Compile Include="Negocio\Interface\BaseClass.cs" />
-    <Compile Include="Negocio\ConfigPattern.cs" />
+    <Compile Include="Negocio\Model\SplitPattern.cs" />
     <Compile Include="Negocio\Interface\IPdfExtract.cs" />
     <Compile Include="Negocio\Interface\IPdfSplit.cs" />
     <Compile Include="Negocio\Interface\IPdfJoin.cs" />

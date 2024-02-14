@@ -1,6 +1,7 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
 using SwDividePDF.Negocio.Interface;
+using SwDividePDF.Negocio.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -82,7 +83,14 @@ namespace SwDividePDF.Negocio.Implementation
             }
         }
 
-        public void SplitPagesByPattern(string sourcePdfPath, List<FilePatternManagement> filePatterns, string name)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sourcePdfPath"></param>
+        /// <param name="filePatterns"></param>
+        /// <param prefix="prefix"></param>
+        public void SplitPagesByPattern(string sourcePdfPath, List<SplitPattern> filePatterns, string prefix)
         {
             //Inicia desde la primera página
             int startPage = 1;
@@ -104,22 +112,23 @@ namespace SwDividePDF.Negocio.Implementation
                 {
                     var numpage = reader.NumberOfPages;//Obtengo el número de páginas del documento
 
-                    if (filePatterns.Sum(x => x.Paginas) > numpage)
+                    if (filePatterns.Sum(x => x.Pags) > numpage)
                         throw new Exception("El listado solicitado contiene mas páginas que el documento.");
 
-                    foreach (var form in filePatterns)//KIT; Páginas; Corporacion
+                    foreach (var configPattern in filePatterns)//Name; Pags; Sufix
                     {
                         //Abro un nuevo documento desde la página de inicio indicada
                         using (var sourceDocument = new Document(reader.GetPageSizeWithRotation(startPage)))
                         {
                             // Initialize an instance of the PdfCopyClass with the source 
                             // document and an output file stream:
-                            var filename = $"{name}_{form.Kit}_{form.Corporacion}.pdf";
+
+                            var filename = $"{prefix}{(string.IsNullOrEmpty(prefix) ? "" : "_")}{configPattern.Name}{(string.IsNullOrEmpty(configPattern.Sufix) ? "" : "_")}{configPattern.Sufix}.pdf";
                             var outputPdfPath = System.IO.Path.Combine(rootOutPath, filename);
                             pdfCopyProvider = new PdfCopy(sourceDocument, new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));
                             // Walk the specified range and add the page copies to the output file:
                             sourceDocument.Open();
-                            for (int i = startPage; i <= (form.Paginas + startPage - 1); i++)//kit.value contiene la cantidad de páginas del kit
+                            for (int i = startPage; i <= (configPattern.Pags + startPage - 1); i++)//configPattern.pags contiene la cantidad de páginas del pdf actual que se divide
                             {
                                 importedPage = pdfCopyProvider.GetImportedPage(reader, i);
                                 pdfCopyProvider.AddPage(importedPage);
