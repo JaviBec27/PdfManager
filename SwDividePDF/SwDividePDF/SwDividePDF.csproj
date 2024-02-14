@@ -11,6 +11,8 @@
     <AssemblyName>SwDividePDF</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,10 +25,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -70,16 +70,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DividePDF.cs">
+    <Compile Include="Negocio\Implementation\PdfPatternSplit.cs" />
+    <Compile Include="Negocio\Implementation\PdfSplit.cs" />
+    <Compile Include="Negocio\Interface\IPdfPatternSplit.cs" />
+    <Compile Include="Presentación\DividePDF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DividePDF.Designer.cs">
+    <Compile Include="Presentación\DividePDF.Designer.cs">
       <DependentUpon>DividePDF.cs</DependentUpon>
     </Compile>
-    <Compile Include="DividePdfByPattern.cs">
+    <Compile Include="Presentación\DividePdfByPattern.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DividePdfByPattern.Designer.cs">
+    <Compile Include="Presentación\DividePdfByPattern.Designer.cs">
       <DependentUpon>DividePdfByPattern.cs</DependentUpon>
     </Compile>
     <Compile Include="Index.cs">
@@ -88,34 +91,37 @@
     <Compile Include="Index.Designer.cs">
       <DependentUpon>Index.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddVersionAndDate.cs">
+    <Compile Include="Presentación\AddVersionAndDate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddVersionAndDate.Designer.cs">
+    <Compile Include="Presentación\AddVersionAndDate.Designer.cs">
       <DependentUpon>AddVersionAndDate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Negocio\BaseClass.cs" />
+    <Compile Include="Negocio\Implementation\PdfExtract.cs" />
+    <Compile Include="Negocio\Implementation\PdfJoin.cs" />
+    <Compile Include="Negocio\Interface\BaseClass.cs" />
     <Compile Include="Negocio\ConfigPattern.cs" />
-    <Compile Include="Negocio\ConvertToImage.cs" />
-    <Compile Include="Negocio\PDFOperation.cs" />
+    <Compile Include="Negocio\Interface\IPdfExtract.cs" />
+    <Compile Include="Negocio\Interface\IPdfSplit.cs" />
+    <Compile Include="Negocio\Interface\IPdfJoin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnePDFs.cs">
+    <Compile Include="Presentación\UnePDFs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UnePDFs.Designer.cs">
+    <Compile Include="Presentación\UnePDFs.Designer.cs">
       <DependentUpon>UnePDFs.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DividePDF.resx">
+    <EmbeddedResource Include="Presentación\DividePDF.resx">
       <DependentUpon>DividePDF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DividePdfByPattern.resx">
+    <EmbeddedResource Include="Presentación\DividePdfByPattern.resx">
       <DependentUpon>DividePdfByPattern.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddVersionAndDate.resx">
+    <EmbeddedResource Include="Presentación\AddVersionAndDate.resx">
       <DependentUpon>AddVersionAndDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -128,7 +134,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UnePDFs.resx">
+    <EmbeddedResource Include="Presentación\UnePDFs.resx">
       <DependentUpon>UnePDFs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -165,6 +171,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
