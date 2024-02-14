@@ -86,3 +86,7 @@ C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\SwDividePDF\SwDividePDF\o
 C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.csproj.CopyComplete
 C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.exe
 C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.pdb
+C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.exe.manifest
+C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\SwDividePDF\SwDividePDF\bin\Debug\SwDividePDF.application
+C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.exe.manifest
+C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\SwDividePDF\SwDividePDF\obj\Debug\SwDividePDF.application
