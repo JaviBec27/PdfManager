@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SwDividePDF.Negocio.Interface;
+using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace SwDividePDF
@@ -33,7 +28,7 @@ namespace SwDividePDF
             var pathOut = GetOutPath();
             if (string.IsNullOrEmpty(pathOut))
             {
-                UtilidadesUE.Mensajes.Mostrar("Nombre de archivo destino, inválido!",UtilidadesUE.Mensajes.Tipos.Error,UtilidadesUE.Mensajes.Visualizacion.PopUp);
+                UtilidadesUE.Mensajes.Mostrar("Nombre de archivo destino, inválido!", UtilidadesUE.Mensajes.Tipos.Error, UtilidadesUE.Mensajes.Visualizacion.PopUp);
                 return;
             }
 
@@ -54,23 +49,19 @@ namespace SwDividePDF
 
         private void UnirPDF(string pathIn, string pathOut)
         {
-            Negocio.PDFOperation pdfo = new Negocio.PDFOperation();
+            IPdfJoin pdfo = new Negocio.Implementation.PdfJoin();
 
             try
             {
-                pdfo.UnePdf(pathIn, pathOut);
-                UtilidadesUE.Mensajes.Mostrar("PDFs Unidos en MergerPDF_xxxx_xxxxxx.pdf", UtilidadesUE.Mensajes.Tipos.Info, UtilidadesUE.Mensajes.Visualizacion.PopUp);
+                pdfo.JoinPages(pathIn, pathOut);
+                UtilidadesUE.Mensajes.Mostrar("PDFs Unidos", UtilidadesUE.Mensajes.Tipos.Info, UtilidadesUE.Mensajes.Visualizacion.PopUp);
+                Process.Start("explorer.exe", pathIn);
             }
             catch (Exception ex)
             {
                 UtilidadesUE.Mensajes.Mostrar(ex.Message, UtilidadesUE.Mensajes.Tipos.Error, UtilidadesUE.Mensajes.Visualizacion.PopUp);
-            }            
-        }
-
-        private System.IO.FileInfo[] files()
-        {
-            return null;
-        }
+            }
+        }       
 
         private void UnePDFs_FormClosed(object sender, FormClosedEventArgs e)
         {

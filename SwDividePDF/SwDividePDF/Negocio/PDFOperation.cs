@@ -1,24 +1,21 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
+using SwDividePDF.Negocio.Interface;
+using System.ComponentModel;
 
 
 namespace SwDividePDF.Negocio
 {
     public class PDFOperation : BaseClass
-    {
+    {       
 
         public PDFOperation() { }
-        public PDFOperation(System.ComponentModel.BackgroundWorker worker)
-        {
-            this.worker = worker;
-        }
+        public PDFOperation(BackgroundWorker worker):base(worker) { }
 
-        protected System.ComponentModel.BackgroundWorker worker;
+        
         /// <summary>
         /// Extrae una pagina de un PDF y la guarda en un nuevo archivo
         /// </summary>
@@ -27,10 +24,6 @@ namespace SwDividePDF.Negocio
         /// <param name="pageNumber">Numero de la página que se extraerá</param>
         public void ExtractPages(string sourcePdfPath, string outputPdfPath, int pageNumber)
         {
-            //PdfReader reader = null;
-            //Document document = null;
-            PdfCopy pdfCopyProvider = null;
-            PdfImportedPage importedPage = null;
 
             try
             {
@@ -42,13 +35,13 @@ namespace SwDividePDF.Negocio
                     {
                         // Initialize an instance of the PdfCopyClass with the source 
                         // document and an output file stream:
-                        pdfCopyProvider = new PdfCopy(document,
+                        var pdfCopyProvider = new PdfCopy(document,
                             new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));
 
                         document.Open();
 
                         // Extract the desired page number:
-                        importedPage = pdfCopyProvider.GetImportedPage(reader, pageNumber);
+                        var importedPage = pdfCopyProvider.GetImportedPage(reader, pageNumber);
                         pdfCopyProvider.AddPage(importedPage);
                     }
                 }
@@ -60,7 +53,7 @@ namespace SwDividePDF.Negocio
         }
 
         /// <summary>
-        /// 
+        /// Extrae de un pdf las páginas indicadas
         /// </summary>
         /// <param name="sourcePdfPath">Ruta donde se aloja el documento PDF</param>
         /// <param name="outputPdfPath">Ruta donde guardaremos el nuevo documento con las páginas extraídas</param>
@@ -70,7 +63,7 @@ namespace SwDividePDF.Negocio
         {
             //PdfReader reader = null;
             //Document sourceDocument = null;
-            PdfCopy pdfCopyProvider = null;
+            // PdfCopy pdfCopyProvider = null;
             PdfImportedPage importedPage = null;
 
             if (outputPdfPath == sourcePdfPath)
@@ -87,7 +80,7 @@ namespace SwDividePDF.Negocio
                     {
                         // Initialize an instance of the PdfCopyClass with the source 
                         // document and an output file stream:
-                        pdfCopyProvider = new PdfCopy(sourceDocument,
+                        var pdfCopyProvider = new PdfCopy(sourceDocument,
                             new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));
 
                         sourceDocument.Open();
@@ -99,9 +92,8 @@ namespace SwDividePDF.Negocio
                             pdfCopyProvider.AddPage(importedPage);
 
                             if (worker != null)
-                            {
                                 worker.ReportProgress(i * 100 / endPage);
-                            }
+
                         }
                     }
                 }
@@ -133,10 +125,6 @@ namespace SwDividePDF.Negocio
         /// <param name="LengthPagexDocument"></param>
         public virtual void DividePages(string sourcePdfPath, string outputPdfPath, int startPage, int LengthPagexDocument)
         {
-            //PdfReader reader = null;
-            //Document sourceDocument = null;
-            PdfCopy pdfCopyProvider = null;
-            PdfImportedPage importedPage = null;
             int j = 0;
             try
             {
@@ -157,12 +145,12 @@ namespace SwDividePDF.Negocio
                             // Initialize an instance of the PdfCopyClass with the source 
                             // document and an output file stream:
                             outputPdfPath = UtilidadesUE.Versionamiento.GetFullPathVersioning(sourcePdfPath, UtilidadesUE.Versionamiento.VersioningType.Identity);
-                            pdfCopyProvider = new PdfCopy(sourceDocument, new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));
+                            var pdfCopyProvider = new PdfCopy(sourceDocument, new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));
                             // Walk the specified range and add the page copies to the output file:
                             sourceDocument.Open();
                             for (int i = startPage; i <= (LengthPagexDocument + startPage - 1); i++)
                             {
-                                importedPage = pdfCopyProvider.GetImportedPage(reader, i);
+                                var importedPage = pdfCopyProvider.GetImportedPage(reader, i);
                                 pdfCopyProvider.AddPage(importedPage);
                                 totalReadedPages++;
 
@@ -179,7 +167,6 @@ namespace SwDividePDF.Negocio
             catch (Exception ex)
             {
                 throw ex;
-                //ErrorMessage = ex.Message;
             }
         }
 

@@ -23,3 +23,9 @@ C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Debug\Utilidade
 C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.csproj.CoreCompileInputs.cache
 C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.dll
 C:\Compilaciones\Desarrollo\csharp\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.pdb
+C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.dll
+C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\UtilidadesUE\UtilidadesUE\bin\Debug\UtilidadesUE.pdb
+C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.csproj.AssemblyReference.cache
+C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.csproj.CoreCompileInputs.cache
+C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.dll
+C:\Users\Javier\Documents\DESARROLLO\csharp\PdfManager\UtilidadesUE\UtilidadesUE\obj\Debug\UtilidadesUE.pdb
