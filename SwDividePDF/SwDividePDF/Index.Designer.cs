@@ -39,11 +39,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(426, 35);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,44 +57,45 @@
             this.DivideByPatternMenuItem,
             this.agregarVersionToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // dividePDFToolStripMenuItem
             // 
             this.dividePDFToolStripMenuItem.Name = "dividePDFToolStripMenuItem";
-            this.dividePDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dividePDFToolStripMenuItem.Text = "DividePDF";
+            this.dividePDFToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
+            this.dividePDFToolStripMenuItem.Text = "Dividir pdf";
             this.dividePDFToolStripMenuItem.Click += new System.EventHandler(this.dividePDFToolStripMenuItem_Click);
             // 
             // unePDFToolStripMenuItem
             // 
             this.unePDFToolStripMenuItem.Name = "unePDFToolStripMenuItem";
-            this.unePDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.unePDFToolStripMenuItem.Text = "UnePDF";
+            this.unePDFToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
+            this.unePDFToolStripMenuItem.Text = "Unir pdfs";
             this.unePDFToolStripMenuItem.Click += new System.EventHandler(this.unePDFToolStripMenuItem_Click);
             // 
             // DivideByPatternMenuItem
             // 
             this.DivideByPatternMenuItem.Name = "DivideByPatternMenuItem";
-            this.DivideByPatternMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.DivideByPatternMenuItem.Text = "DividePDFxKIT";
+            this.DivideByPatternMenuItem.Size = new System.Drawing.Size(289, 34);
+            this.DivideByPatternMenuItem.Text = "Dividir pdf por patrón";
             this.DivideByPatternMenuItem.Click += new System.EventHandler(this.DivideByPatternMenuItem_Click);
             // 
             // agregarVersionToolStripMenuItem
             // 
             this.agregarVersionToolStripMenuItem.Name = "agregarVersionToolStripMenuItem";
-            this.agregarVersionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.agregarVersionToolStripMenuItem.Text = "AgregarVersion";
+            this.agregarVersionToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
+            this.agregarVersionToolStripMenuItem.Text = "Agregar version";
             this.agregarVersionToolStripMenuItem.Click += new System.EventHandler(this.agregarVersionToolStripMenuItem_Click);
             // 
             // Index
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(426, 403);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Index";
             this.Text = "Index";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
