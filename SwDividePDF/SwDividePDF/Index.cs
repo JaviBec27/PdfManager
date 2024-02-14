@@ -50,8 +50,7 @@ namespace SwDividePDF
 
         private bool Validation(Form frmOpen)
         {
-            return (Application.OpenForms.Count <= 1);
-            
+            return (Application.OpenForms.Count <= 1);          
                 
             
 

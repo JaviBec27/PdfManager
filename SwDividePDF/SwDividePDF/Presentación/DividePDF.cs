@@ -1,13 +1,6 @@
-﻿using iTextSharp.text;
-using iTextSharp.text.pdf;
+﻿using SwDividePDF.Negocio.Interface;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -54,7 +47,7 @@ namespace SwDividePDF
                     return;
                 }
 
-                Negocio.PDFOperation pdf = new Negocio.PDFOperation(worker);
+
 
                 if (ChkExtraer.Checked)
                 {
@@ -63,10 +56,14 @@ namespace SwDividePDF
                         UtilidadesUE.Mensajes.Mostrar("La página inicial debe ser menor o igual que la final", UtilidadesUE.Mensajes.Tipos.Error, UtilidadesUE.Mensajes.Visualizacion.PopUp);
                         return;
                     }
-                    ExtractPage(pdf,sourcepath, outpath, pagIn, pagFin);
+                    IPdfExtract pdfExtract = new Negocio.Implementation.PdfExtract(worker);
+                    ExtractPage(pdfExtract, sourcepath, pagIn, pagFin);
                 }
                 else
-                    DividePage(pdf,sourcepath, outpath, pagIn, pagFin);
+                {
+                    IPdfSplit pdfSplit = new Negocio.Implementation.PdfSplit(worker);
+                    DividePage(pdfSplit, sourcepath, pagIn, pagFin);
+                }
 
                 UtilidadesUE.Mensajes.Mostrar("PDF Dividido!", UtilidadesUE.Mensajes.Tipos.Info, UtilidadesUE.Mensajes.Visualizacion.PopUp);
             }
@@ -76,31 +73,21 @@ namespace SwDividePDF
             }
         }
 
-        private void ExtractPage(Negocio.PDFOperation pdf, string sourcepath, string outpath, int ini, int fin)
-        {            
+        private void ExtractPage(IPdfExtract pdf, string sourcepath, int ini, int fin)
+        {
             pdf.ExtractPages(sourcepath, sourcepath, ini, fin);
         }
 
-        private void ExtractPage(Negocio.PDFOperation pdf, string sourcepath, string outpath, int p)
-        {            
-            pdf.ExtractPages(sourcepath, sourcepath, p);
-        }
-
-        private void DividePage(Negocio.PDFOperation pdf, string sourcepath, string outpath, int ini, int fin)
-        {            
+        private void DividePage(IPdfSplit pdf, string sourcepath, int ini, int fin)
+        {
             try
             {
-                pdf.DividePages(sourcepath, sourcepath, ini, fin);
+                pdf.SplitPages(sourcepath, sourcepath, ini, fin);
             }
-            catch (Exception ex) 
-            {                
+            catch (Exception ex)
+            {
                 throw ex;
             }
-        }
-
-        private void DividePage(Negocio.PDFOperation pdf, string sourcepath, string outpath, int p)
-        {            
-            pdf.DividePages(sourcepath, sourcepath, p);
         }
 
 

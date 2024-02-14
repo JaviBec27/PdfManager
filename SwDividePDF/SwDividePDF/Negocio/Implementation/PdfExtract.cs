@@ -8,8 +8,8 @@ namespace SwDividePDF.Negocio.Implementation
 {
     public class PdfExtract : BaseClass, IPdfExtract
     {
-        PdfExtract() { }
-        PdfExtract(BackgroundWorker worker) : base(worker) { }
+        public PdfExtract() { }
+        public PdfExtract(BackgroundWorker worker) : base(worker) { }
 
         /// <summary>
         /// Extrae una pagina de un PDF y la guarda en un nuevo archivo

@@ -24,7 +24,7 @@ namespace SwDividePDF.Negocio.Implementation
             System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(sourcePath);
 
             var files = dir.GetFiles("*.pdf");
-            outputPdfPath = Versionamiento.GetFullPathVersioning(outputPdfPath, Versionamiento.VersioningType.FullPath_ddMMyy_hhmmss, "PdfJoined");
+            outputPdfPath = Versionamiento.GetFullPathVersioning(outputPdfPath, Versionamiento.VersioningType.FullPath_ddMMyy_hhmmss);
 
             var sourceDocument = new Document();
 
