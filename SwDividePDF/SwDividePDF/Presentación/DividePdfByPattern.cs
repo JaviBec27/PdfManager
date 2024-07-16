@@ -1,4 +1,5 @@
 ﻿using SwDividePDF.Negocio.Dto;
+using SwDividePDF.Presentación;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,11 +13,12 @@ using System.Windows.Forms;
 
 namespace SwDividePDF
 {
-    public partial class DividePdfByPattern : Form
+    public partial class DividePdfByPattern : MainForm
     {
         public DividePdfByPattern()
         {
             InitializeComponent();
+            ApplyGlobalStyles();
         }
 
         private void BtnSend_Click(object sender, EventArgs e)

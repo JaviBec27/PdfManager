@@ -67,6 +67,9 @@
     <Reference Include="itextsharp">
       <HintPath>..\packages\iTextSharp.5.5.9\lib\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -89,6 +92,9 @@
     <Compile Include="Negocio\Interface\IPdfPatternSplit.cs" />
     <Compile Include="Negocio\Service\FilePatternManager.cs" />
     <Compile Include="Negocio\Service\PatternManager.cs" />
+    <Compile Include="Presentación\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\DividePDF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,12 +106,6 @@
     </Compile>
     <Compile Include="Presentación\DividePdfByPattern.Designer.cs">
       <DependentUpon>DividePdfByPattern.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Index.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Index.Designer.cs">
-      <DependentUpon>Index.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentación\AddVersionAndDate.cs">
       <SubType>Form</SubType>
@@ -120,6 +120,24 @@
     <Compile Include="Negocio\Interface\IPdfExtract.cs" />
     <Compile Include="Negocio\Interface\IPdfSplit.cs" />
     <Compile Include="Negocio\Interface\IPdfJoin.cs" />
+    <Compile Include="Presentación\Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Style\Interface\IGlobalStyleStrategy.cs" />
+    <Compile Include="Presentación\Style\StyleCase\BlueCore.cs" />
+    <Compile Include="Presentación\Style\StyleCase\DarkStyle.cs" />
+    <Compile Include="Presentación\Style\StyleCase\GreenRainDay.cs" />
+    <Compile Include="Presentación\Style\StyleCase\LightStyle.cs" />
+    <Compile Include="Presentación\Style\StyleCase\StyleContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Presentación\UnePDFs.cs">
@@ -128,17 +146,23 @@
     <Compile Include="Presentación\UnePDFs.Designer.cs">
       <DependentUpon>UnePDFs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Presentación\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\DividePDF.resx">
       <DependentUpon>DividePDF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\DividePdfByPattern.resx">
       <DependentUpon>DividePdfByPattern.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Index.resx">
-      <DependentUpon>Index.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\AddVersionAndDate.resx">
       <DependentUpon>AddVersionAndDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

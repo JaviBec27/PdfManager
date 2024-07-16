@@ -17,7 +17,7 @@ namespace SwDividePDF.Negocio.Implementation
         /// <param name="sourcePdfPath">Ruta donde se aloja el documento PDF</param>
         /// <param name="outputPdfPath">Ruta donde guardaremos el nuevo documento con la pagina estraída</param>
         /// <param name="pageNumber">Numero de la página que se extraerá</param>
-        public void ExtractPages(string sourcePdfPath, string outputPdfPath, int pageNumber)
+        public void ExtractPage(string sourcePdfPath, string outputPdfPath, int pageNumber)
         {
 
             try
