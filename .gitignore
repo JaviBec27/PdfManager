@@ -16,6 +16,8 @@ bld/
 # Ignore Visual Studio temporary files
 .vs/
 
+.vs/SwDividePDF/v17/.suo
+SwDividePDF.vs/SwDividePDF/v17/.suo
 
 # Visual Studio Code directories
 .vscode/
