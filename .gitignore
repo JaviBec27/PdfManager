@@ -13,8 +13,14 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# Ignore Visual Studio temporary files
+.vs/
+
+
 # Visual Studio Code directories
 .vscode/
+
+
 
 # User-specific files
 *.rsuser
