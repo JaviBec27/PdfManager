@@ -1,7 +1,10 @@
-﻿using System;
+﻿using SwDividePDF.Negocio.Dto;
+using SwDividePDF.Presentación;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,42 +13,53 @@ using System.Windows.Forms;
 
 namespace SwDividePDF
 {
-    public partial class DividePdfByPattern : Form
+    public partial class DividePdfByPattern : MainForm
     {
         public DividePdfByPattern()
         {
             InitializeComponent();
+            ApplyGlobalStyles();
         }
 
         private void BtnSend_Click(object sender, EventArgs e)
         {
-            var arr = new string[4];
-            arr[0] = TxtPathPdf.Text;
-            arr[1] = TxtDivisorPattern.Text;
-            arr[2] = TxtNombre.Text;
-            arr[3] = TxtPref.Text;
+            SplitterByPatternParams splitterParams = new SplitterByPatternParams()
+            {
+                PathFilePdf = TxtPathFilePdf.Text,
+                ConfigurationOutputFile = new ConfigurationOutputFileParams { AddDateTimeNameSufix = ChkAddDateTime.Checked, Prefix = TxtPrefix.Text },
+                ConfigurationPattern = new ConfigurationPatternParams { HasHeaders = ChkHeaders.Checked, PathFileSplitPattern = TxtPathFileSplitPattern.Text, SplitterPattern = Convert.ToChar(TxtSplitter.Text) }
+            };
+
             if (!backgroundWorker1.IsBusy)
-                backgroundWorker1.RunWorkerAsync(arr);
+                backgroundWorker1.RunWorkerAsync(splitterParams);
             else
                 UtilidadesUE.Mensajes.Mostrar("Ya se encuentra en ejecución otro proceso", UtilidadesUE.Mensajes.Tipos.Info);
-            
+
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             var worker = (BackgroundWorker)sender;
-            var parameters = (string[])e.Argument;
-            ExecProcess(worker, parameters[0], parameters[1], parameters[2], parameters[3]);
+            var parameters = (SplitterByPatternParams)e.Argument;
+            ExecProcess(worker, parameters);
         }
 
-        private void ExecProcess(BackgroundWorker worker, string pdfPath, string divisorPatternPath, string nombre, string prefijo)
+        private void ExecProcess(BackgroundWorker worker, SplitterByPatternParams configParams)
         {
             try
             {
+
+                var splitPatternList = Negocio.Service.PatternManager.GetSplitterPattern(configParams.ConfigurationPattern);
+                if (!splitPatternList.Any())
+                    throw new Exception("El archivo de configuración de división no se cargó correctamente");
+
+
                 Negocio.Interface.IPdfPatternSplit pdf = new Negocio.Implementation.PdfPatternSplit(worker);
-                pdf.SplitPagesByPattern(pdfPath, Negocio.ConfigPattern.GetFilePatternManagements(divisorPatternPath), nombre);
+
+                pdf.SplitPagesByPattern(configParams.PathFilePdf, splitPatternList, configParams.ConfigurationOutputFile.Prefix);
 
                 UtilidadesUE.Mensajes.Mostrar("Proceso Finalizado!", UtilidadesUE.Mensajes.Tipos.Info);
+                Process.Start("explorer.exe", new System.IO.FileInfo(configParams.PathFilePdf).DirectoryName);
             }
             catch (Exception ex)
             {
@@ -64,7 +78,7 @@ namespace SwDividePDF
             var ofd = new OpenFileDialog();
 
             if (ofd.ShowDialog() == DialogResult.OK)
-                TxtDivisorPattern.Text = ofd.FileName;
+                TxtPathFileSplitPattern.Text = ofd.FileName;
         }
 
         private void BtnPath_Click(object sender, EventArgs e)
@@ -72,7 +86,7 @@ namespace SwDividePDF
             var ofd = new OpenFileDialog();
 
             if (ofd.ShowDialog() == DialogResult.OK)
-                TxtPathPdf.Text = ofd.FileName;
+                TxtPathFilePdf.Text = ofd.FileName;
         }
 
         private void ShowHelpMessage()

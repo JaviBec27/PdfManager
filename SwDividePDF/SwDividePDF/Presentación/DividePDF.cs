@@ -1,4 +1,6 @@
 ﻿using SwDividePDF.Negocio.Interface;
+using SwDividePDF.Presentación;
+using SwDividePDF.Presentación.Style.StyleCase;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -6,15 +8,17 @@ using System.Windows.Forms;
 
 namespace SwDividePDF
 {
-    public partial class DividePDF : Form
+    public partial class DividePDF : MainForm
     {
         private string MENSAJE_DIVIDIR = "Permite Dividir el PDF de a X páginas";
         private string MENSAJE_EXTRAER = "Permite extraer del PDF las páginas entre una Página Inicial y una Final";
-
-        public DividePDF()
+        
+        public DividePDF():base()
         {
+          
             InitializeComponent();
             LblMessage.Text = MENSAJE_EXTRAER;
+            ApplyGlobalStyles();
         }
 
         private void BtnSend_Click(object sender, EventArgs e)
