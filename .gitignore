@@ -19,6 +19,11 @@ bld/
 .vs/SwDividePDF/v17/.suo
 SwDividePDF.vs/SwDividePDF/v17/.suo
 
+SwDividePDF/SwDividePDF/SwDividePDF.csproj.user
+UtilidadesUE/UtilidadesUE/obj/
+
+
+
 # Visual Studio Code directories
 .vscode/
 
