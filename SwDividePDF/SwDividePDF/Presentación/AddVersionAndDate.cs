@@ -10,15 +10,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SwDividePDF.Presentación;
 
 namespace SwDividePDF
 {
-    public partial class AddVersionAndDate : Form
+    public partial class AddVersionAndDate : MainForm
     {
         public AddVersionAndDate()
         {
             InitializeComponent();
             TxtCreationDate.Text = DateTime.Now.ToString("dd-MM-yyyy");
+            ApplyGlobalStyles();
         }
 
         private void BtnSend_Click(object sender, EventArgs e)

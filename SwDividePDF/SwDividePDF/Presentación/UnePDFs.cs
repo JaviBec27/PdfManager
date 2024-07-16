@@ -1,15 +1,17 @@
 ﻿using SwDividePDF.Negocio.Interface;
+using SwDividePDF.Presentación;
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace SwDividePDF
 {
-    public partial class UnePDFs : Form
+    public partial class UnePDFs : MainForm
     {
         public UnePDFs()
         {
             InitializeComponent();
+            ApplyGlobalStyles();
         }
 
         private void BtnPath_Click(object sender, EventArgs e)
