@@ -1,0 +1,115 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio Code directories
+.vscode/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Files that might appear in the root of a volume
+$RECYCLE.BIN/
+
+# VS Code files
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.vscode/*.{json,code-workspace}
+
+# Node.js dependencies
+node_modules/
+
+# Node.js package directories
+npm/
+yarn/
+pnpm/
+
+# Microsoft Azure Web Apps deploy package directories
+site/
+
+# Local History for Visual Studio
+.localhistory/
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+*.e2e
+*.coverage
+*.coveragexml
+_IntegrationTests/
+_Linker/
+_UpgradeReport_Files/
+Backup*/
+
+# Windows Store app package directories and files
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+Package.StoreAssociation.xml
+
+# Visual Studio cache files
+*.build.csdef
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# End of http://www.toptal.com/developers/gitignore/api/csharp
+
+# Ignore all build outputs
+bin/
+obj/
+
+# Ignore Visual Studio solution and project specific files
+*.csproj.user
+*.vbproj.user
+*.sln.docstates
+*.csproj.*
+*.vbproj.*
+*.pidb
+
+# Ignore Visual Studio temporary files, build results, and
+# Uncomment if you have tasks.json that you want to include
+# !tasks.json
+.vscode/
+
+# Ignore configuration files
+*.DotSettings
