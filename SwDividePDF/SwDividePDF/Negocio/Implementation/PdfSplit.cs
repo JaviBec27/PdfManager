@@ -2,8 +2,8 @@
 using iTextSharp.text.pdf;
 using SwDividePDF.Negocio.Interface;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
+
 
 namespace SwDividePDF.Negocio.Implementation
 {
@@ -19,11 +19,18 @@ namespace SwDividePDF.Negocio.Implementation
 
         public void SplitPages(string sourcePdfPath, string outputPdfPath, int startPage, int LengthPagexDocument)
         {
+            SplitPages(sourcePdfPath, startPage, LengthPagexDocument);
+        }
+
+        public void SplitPages(string sourcePdfPath, int startPage, int LengthPagexDocument)
+        {
+            //Obtiene la ruta de la carpeta de salida basada en el archivo original
+            var newFolder = "SplitedPages";
+            var outputPdfPath = UtilidadesUE.DirectoryManager.GetOutputFullDirectoryPath(sourcePdfPath, newFolder);
             int j = 0;
             try
             {
                 // Intialize a new PdfReader instance with the contents of the source Pdf file:
-                //reader = new PdfReader(sourcePdfPath);
                 using (PdfReader reader = new PdfReader(sourcePdfPath))
                 {
                     var totalReadedPages = startPage - 1;
@@ -32,13 +39,15 @@ namespace SwDividePDF.Negocio.Implementation
                     {
                         startPage = ssPage + 1 + (j * LengthPagexDocument);
 
+                        outputPdfPath = UtilidadesUE.Versionamiento.GetFullPathVersioning(outputPdfPath, UtilidadesUE.Versionamiento.VersioningType.Identity);
+
                         // For simplicity, I am assuming all the pages share the same size
                         // and rotation as the first page:
                         using (var sourceDocument = new Document(reader.GetPageSizeWithRotation(startPage)))
                         {
                             // Initialize an instance of the PdfCopyClass with the source 
                             // document and an output file stream:
-                            outputPdfPath = UtilidadesUE.Versionamiento.GetFullPathVersioning(sourcePdfPath, UtilidadesUE.Versionamiento.VersioningType.Identity);
+
                             var pdfCopyProvider = new PdfCopy(sourceDocument, new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));
                             // Walk the specified range and add the page copies to the output file:
                             sourceDocument.Open();
@@ -57,6 +66,11 @@ namespace SwDividePDF.Negocio.Implementation
                         }
                     }
                 }
+
+                //Agrega los archivos creados a .zip
+                var outPathZip = UtilidadesUE.DirectoryManager.GetOutputDirectoryPath(sourcePdfPath, newFolder, false);
+                Service.ZipService.AddFilesToZip(sourcePdfPath, outPathZip);
+
             }
             catch (Exception ex)
             {
@@ -64,5 +78,6 @@ namespace SwDividePDF.Negocio.Implementation
             }
         }
 
-    }
-}
+
+    }//Fin clase
+}//Fin namespace

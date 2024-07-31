@@ -3,6 +3,7 @@ using SwDividePDF.Presentación;
 using SwDividePDF.Presentación.Style.StyleCase;
 using System;
 using System.ComponentModel;
+using System.IO;
 using System.Windows.Forms;
 
 
@@ -12,10 +13,10 @@ namespace SwDividePDF
     {
         private string MENSAJE_DIVIDIR = "Permite Dividir el PDF de a X páginas";
         private string MENSAJE_EXTRAER = "Permite extraer del PDF las páginas entre una Página Inicial y una Final";
-        
-        public DividePDF():base()
+
+        public DividePDF() : base()
         {
-          
+
             InitializeComponent();
             LblMessage.Text = MENSAJE_EXTRAER;
             ApplyGlobalStyles();
@@ -34,6 +35,7 @@ namespace SwDividePDF
             try
             {
                 var sourcepath = TxtPath.Text;
+                //Obtiene el path de salida sobre el path fuente
                 var outpath = UtilidadesUE.Versionamiento.GetFullPathVersioning(sourcepath, UtilidadesUE.Versionamiento.VersioningType.FullPath_ddMMyy_hhmmss);
 
                 int pagIn = 0;
@@ -79,14 +81,31 @@ namespace SwDividePDF
 
         private void ExtractPage(IPdfExtract pdf, string sourcepath, int ini, int fin)
         {
-            pdf.ExtractPages(sourcepath, sourcepath, ini, fin);
+
+            try
+            {
+                //Se ejecuta el dividor de pdfs, apuntando que su salida esté en la raiz del archivo de entrada
+                var originPathInfo = new FileInfo(sourcepath);
+                if (!originPathInfo.Exists)
+                    throw new Exception("Archivo no encontrado");
+
+
+                var outputPath = Path.Combine(originPathInfo.DirectoryName, "ExtractedPages");
+                pdf.ExtractPages(sourcepath, sourcepath, ini, fin);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         private void DividePage(IPdfSplit pdf, string sourcepath, int ini, int fin)
         {
             try
             {
-                pdf.SplitPages(sourcepath, sourcepath, ini, fin);
+                pdf.SplitPages(sourcepath, ini, fin);
             }
             catch (Exception ex)
             {

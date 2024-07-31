@@ -49,7 +49,8 @@ namespace UtilidadesUE
                 case VersioningType.Identity:
                     newPath = GetFullPathVersioningIdentity(fi, "");
                     break;
-                default: newPath = fi.FullName;
+                default:
+                    newPath = fi.FullName;
                     break;
             }
             return newPath;
@@ -64,8 +65,8 @@ namespace UtilidadesUE
         /// <returns></returns>
         public static string GetFullPathVersioning(string path, VersioningType version, string prefijo)
         {
-            FileInfo fi = new FileInfo(path);
-            var newPath = string.Empty;
+            var fi = new FileInfo(path);
+            string newPath;
             switch (version)
             {
                 case VersioningType.FullPath_ddMMyy_hhmmss:
@@ -77,7 +78,8 @@ namespace UtilidadesUE
                 case VersioningType.Identity:
                     newPath = GetFullPathVersioningIdentity(fi, prefijo);
                     break;
-                default: newPath = fi.FullName;
+                default:
+                    newPath = fi.FullName;
                     break;
             }
             return newPath;
@@ -137,7 +139,7 @@ namespace UtilidadesUE
             if (!string.IsNullOrWhiteSpace(prefijo))
                 prefijo += "_";
 
-            StringBuilder newFile = new StringBuilder();
+            var newFile = new StringBuilder();
             var dir = fi.DirectoryName;
             var ext = fi.Extension;
             var name = fi.Name.Replace(ext, "");

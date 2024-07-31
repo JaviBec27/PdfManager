@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace UtilidadesUE
 {
-    public class Normalizacion
+    public static class Normalizacion
     {
         /// <summary>
         /// Permite dividir un string en una estructura definida en una lista generica de enteros
@@ -16,7 +16,7 @@ namespace UtilidadesUE
         ///         retorno = [12 23 34]
         /// </remarks>
         /// <returns>retorna un arreglo con la estructura dividida, Nota: No tiene eliminacion de espacios</returns>
-        static public ArrayList DividirEstructura(string cadena, IEnumerable<int> paramDivision)
+        public static ArrayList DividirEstructura(string cadena, IEnumerable<int> paramDivision)
         {
             var data = new ArrayList();
             var acum = 0;
