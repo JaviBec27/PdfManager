@@ -12,16 +12,6 @@ namespace SwDividePDF.Negocio.Implementation
         public PdfSplit() { }
         public PdfSplit(BackgroundWorker worker) : base(worker) { }
 
-        public void SplitPages(string sourcePdfPath, string outputPdfPath, int LengthPagexDocument)
-        {
-            SplitPages(sourcePdfPath, outputPdfPath, 1, LengthPagexDocument);
-        }
-
-        public void SplitPages(string sourcePdfPath, string outputPdfPath, int startPage, int LengthPagexDocument)
-        {
-            SplitPages(sourcePdfPath, startPage, LengthPagexDocument);
-        }
-
         public void SplitPages(string sourcePdfPath, int startPage, int LengthPagexDocument)
         {
             //Obtiene la ruta de la carpeta de salida basada en el archivo original
